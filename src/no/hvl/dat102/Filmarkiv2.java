@@ -6,11 +6,11 @@ import no.hvl.dat102.exception.EmptyCollectionException;
 public class Filmarkiv2 implements FILMarkivADT {
 	private int antall;
 	private LinearNode<Film> start;
-	// OBS! Ingen referanse til siste, kun start … /* Klassen skal ha de samme
-	// operasjoner som for Filmarkiv i øving 2, men pass på at implementeringen av
+	// OBS! Ingen referanse til siste, kun start â€¦ /* Klassen skal ha de samme
+	// operasjoner som for Filmarkiv i Ã¸ving 2, men pass pÃ¥ at implementeringen av
 	// alle metoder blir tilpasset den nye strukturen. */
 
-	// Tom Konstruktør
+	// Tom KonstruktÃ¸r
 	public Filmarkiv2() {
 		start = null;
 		antall = 0;
@@ -31,7 +31,7 @@ public class Filmarkiv2 implements FILMarkivADT {
 		return filmTabell;
 	}
 
-	// Samme TrimTab som før
+	// Samme TrimTab som fÃ¸r
 	private Film[] trimTab(Film[] tab, int n) { // n er antall elementer
 		Film[] filmtab2 = new Film[n];
 		int i = 0;
@@ -44,7 +44,7 @@ public class Filmarkiv2 implements FILMarkivADT {
 
 	@Override
 	public void leggTilFilm(Film nyFilm) {
-		// Konstruktør
+		// KonstruktÃ¸r
 		LinearNode<Film> nyFilmNode = new LinearNode<Film>(nyFilm);
 		// Setter start til den nye noden sin neste,
 		nyFilmNode.setNeste(start);
@@ -59,23 +59,24 @@ public class Filmarkiv2 implements FILMarkivADT {
 		if (antall == 0) {
 			throw new EmptyCollectionException("filmarkiv2");
 		}
-		// Sjekker om det er den første noden som skal slettes,
+		// Sjekker om det er den fÃ¸rste noden som skal slettes,
 		// hvis ikke sjekker den resten.
 		if (start.getElement().getFilmnr() == filmnr) {
 			start = start.getNeste();
 			antall--;
 			return true;
 		}
-		// Lager temp noder for å bruke den tidligere noden
-		// når evt node blir funnet og skal slettes.
+		// Lager temp noder for Ã¥ bruke den tidligere noden
+		// nÃ¥r evt node blir funnet og skal slettes.
 		LinearNode<Film> forgjenger = start;
 		LinearNode<Film> denne = forgjenger.getNeste();
-		// Går gjennom den hvert element i den kjedete strukturen
-		// for å se om filmen er i arkivet
+		// GÃ¥r gjennom den hvert element i den kjedete strukturen
+		// for Ã¥ se om filmen er i arkivet
 		while (!filmFunnet && denne.getNeste() != null) {
 			if (filmnr == denne.getElement().getFilmnr()) {
 				// Kommer du her er filmen funnet i kjeden
 				forgjenger.setNeste(denne.getNeste());
+				filmFunnet = true;
 				antall--;
 			}
 		}
