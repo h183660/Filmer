@@ -1,0 +1,13 @@
+12
+1#Christopher Nolan#Interstellar#2014#Adventure#Warner Bros. Pictures
+2#David Fincher#Se7en#1995#Crime#New Line Cinema
+3#Pete Dicter#Monsters, Inc.#2001#Animasjon#Pixar
+4#Quentin Tarantino#Django Unchained#2012#Drama#Columbia Pictures
+5#Denis Villeneuve#Blade Runner 2049#2017#Action#Warner Bros. Pictures
+6#Bong Joon Ho#Parasite#2019#Drama#Neon
+7#Martin Scorsese#The Departed#2006#Drama#Warner Bros. Pictures
+8#Damien Chazelle#La La Land#2016#Drama#Summit
+9#David Fincher#Gone Girl#2014#Drama#20th Century Fox
+10#Andrew Stanton#WALL-E#2008#Animasjon#Pixar
+11#Jimmy Chin#Free Solo#2018#Adventure#National Geographic
+12#James Mangold#Logan#2017#Action#Marvel
