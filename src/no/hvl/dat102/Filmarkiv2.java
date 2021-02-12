@@ -76,8 +76,8 @@ public class Filmarkiv2 implements FILMarkivADT {
 			if (filmnr == denne.getElement().getFilmnr()) {
 				// Kommer du her er filmen funnet i kjeden
 				forgjenger.setNeste(denne.getNeste());
-				filmFunnet = true;
 				antall--;
+				filmFunnet = true;
 			}
 		}
 		return filmFunnet;
